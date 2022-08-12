@@ -1,6 +1,8 @@
 # Testing-Selenium-Python
 
-My introduction to Selenium WebDriver with Python following the test automation university course
+My introduction to Selenium WebDriver with Python following the test automation university course.
+
+I've added the repo created by the course instructor Andy Knight as a submodule in order to follow the course properly. 
 
 ## Fixtures
 
