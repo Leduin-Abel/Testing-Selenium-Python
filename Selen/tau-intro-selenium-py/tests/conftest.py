@@ -15,4 +15,4 @@ def browser():
     yield chromeWebDriver
 
     # Quit the instance for the cleanup
-    chromeWebDriver.quit
+    chromeWebDriver.quit()
