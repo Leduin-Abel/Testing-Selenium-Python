@@ -1,17 +1,27 @@
 
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 
 
 class searchEngineSearchPage:
 
-    searchInput = (By.ID,'search_form_input_homepage')
+    #URL
+    URL = 'https://duckduckgo.com/'
 
+    #Locator
+    SEARCH_INPUT = (By.ID,'search_form_input_homepage')
+
+    #Initializer
     def __init__(self, browser):
         self.browser = browser
 
+    #Interactions
     def load(self):
-        pass
+        self.browser.get(self.URL)
+        
 
     def search(self, phrase):
-        pass
+        searchInput = self.browser.find_element(*self.SEARCH_INPUT)
+        searchInput.send_keys(phrase + Keys.RETURN)
+

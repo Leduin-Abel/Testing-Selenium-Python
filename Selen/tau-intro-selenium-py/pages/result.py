@@ -4,19 +4,21 @@ from selenium.webdriver.common.by import By
 
 class searchEngineResultPage:
 
-    resultLinks = (By.CSS_SELECTOR, 'a.result__a')
-    searhInput = (By.ID, 'search_form_input')
+    RESULT_LINKS = (By.CSS_SELECTOR, 'a.result__a')
+    SEARCH_INPUT = (By.ID, 'search_form_input')
 
-
-    def __init__(self,browser):
+    def __init__(self, browser):
         self.browser = browser
-        pass
 
     def result_link_titles(self):
-        return[]
+        links = self.browser.find_elements(*self.RESULT_LINKS)
+        titles = [link.text for link in links]
+        return [titles]
 
     def search_input_value(self):
-        return ""
+        searchInput = self.browser.find_element(*self.SEARCH_INPUT)
+        value = searchInput.get_attribute('value')
+        return "value"
 
     def title(self):
-        return ""
+        return self.browser.title
