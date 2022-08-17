@@ -18,7 +18,7 @@ class searchEngineResultPage:
     def search_input_value(self):
         searchInput = self.browser.find_element(*self.SEARCH_INPUT)
         value = searchInput.get_attribute('value')
-        return "value"
+        return value
 
     def title(self):
         return self.browser.title
