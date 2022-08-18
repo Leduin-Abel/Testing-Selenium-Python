@@ -14,8 +14,8 @@ These files are headed by files called <__init__.py>, which is just for the mach
 
 ## Different browsers
 
-When writing automated tests with Selenium WebDriver or any web-based test, regardless of  language, one should always avoid hard-coding the browser into the tests because this limits the versatility of said tests. 
+When writing automated tests with Selenium WebDriver or any web-based test, regardless of  language, one should always avoid hard-coding the browser into the tests because this limits the versatility of said tests. As well as, to make sure the web application properly works in all browsers
 
 ## Race conditions
 
-These are situations in which multiple actors try to access the same resource without a clear order of operations, these can cause flakiness in testing. And must be handled properly. Specifically in Web UI race conditions can happen when the automation or test suite tries to interact with a page before it is fully loaded in order to avoid this, one should wait until the target element or property is fully loaded or it is ready to be interacted with
+These are situations in which multiple actors try to access the same resource without a clear order of operations, these can cause flakiness in testing. And must be handled properly. Specifically in Web UI race conditions can happen when the automation or test suite tries to interact with a page before it is fully loaded in order to avoid this, one should wait until the target element or property is fully loaded or it is ready to be interacted with. Another way to handle this conditions is to re-order the interactions, each case is unique and depends on the application as well as the browser or platform is being tested on
